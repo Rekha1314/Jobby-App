@@ -47,14 +47,14 @@ const FiltersGroup = props => {
         updateEmploymentTypesChecked(eachType.employmentTypeId)
 
       return (
-        <li className="filters-list-item" key={eachType.employmentTypeId}>
+        <li className='filters-list-item' key={eachType.employmentTypeId}>
           <input
-            type="checkbox"
-            className="checkbox-input"
+            type='checkbox'
+            className='checkbox-input'
             id={eachType.employmentTypeId}
             onChange={updateTypesList}
           />
-          <label htmlFor={eachType.employmentTypeId} className="filter-label">
+          <label htmlFor={eachType.employmentTypeId} className='filter-label'>
             {eachType.label}
           </label>
         </li>
@@ -64,8 +64,8 @@ const FiltersGroup = props => {
 
   const renderEmploymentTypes = () => (
     <>
-      <h1 className="filter-heading">Type of Employment</h1>
-      <ul className="filters-list">{renderEmployementTypesList()}</ul>
+      <h1 className='filter-heading'>Type of Employment</h1>
+      <ul className='filters-list'>{renderEmployementTypesList()}</ul>
     </>
   )
 
@@ -78,16 +78,16 @@ const FiltersGroup = props => {
       const isChecked = eachRange.salaryRangeId === activeSalaryRangeId
 
       return (
-        <li className="filters-list-item" key={eachRange.salaryRangeId}>
+        <li className='filters-list-item' key={eachRange.salaryRangeId}>
           <input
-            type="radio"
-            className="checkbox-input"
+            type='radio'
+            className='checkbox-input'
             id={eachRange.salaryRangeId}
-            name="salary ranges"
+            name='salary ranges'
             onChange={onChangeRange}
             checked={isChecked}
           />
-          <label htmlFor={eachRange.salaryRangeId} className="filter-label">
+          <label htmlFor={eachRange.salaryRangeId} className='filter-label'>
             {eachRange.label}
           </label>
         </li>
@@ -97,15 +97,15 @@ const FiltersGroup = props => {
 
   const renderSalaryRangesTypes = () => (
     <>
-      <h1 className="filter-heading">Salary Range</h1>
-      <ul className="filters-list">{renderSalaryRangesList()}</ul>
+      <h1 className='filter-heading'>Salary Range</h1>
+      <ul className='filters-list'>{renderSalaryRangesList()}</ul>
     </>
   )
 
   return (
-    <div className="filters-group-container">
+    <div className='filters-group-container'>
       {renderEmploymentTypes()}
-      <hr className="separator" />
+      <hr className='separator' />
       {renderSalaryRangesTypes()}
     </div>
   )
